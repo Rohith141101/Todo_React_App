@@ -5,7 +5,7 @@ import Todo from './Todo'
 import EditTodoForm from './EditTodoForm'
 uuidv4()
 const TodoWrapper = () => {
-    const[todos,setTodos]=useState([])
+    const[todos,setTodos]=useState([{id:uuidv4(), task:"Need to create a portfolio", completed:true, isEditing:true }])
 
     const addTodo=(todo)=>{
         setTodos([...todos, {id:uuidv4(), task:todo, completed:false, isEditing:false }])
